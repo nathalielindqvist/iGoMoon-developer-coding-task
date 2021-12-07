@@ -1,6 +1,3 @@
-
-
-
 $('#fullName').hide();
 $('#submitButton').hide();
 
@@ -14,7 +11,7 @@ function check(event) {
 let email = document.getElementById('inputEmail').value;
 
 if(regex.test(email)) {
-  $('#validation').text('')
+  $('#validation').hide()
   $('#fullName').fadeIn(200);
   $('#submitButton').fadeIn(200);
 } else {
