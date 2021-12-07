@@ -1,5 +1,7 @@
-$('#firstName').hide();
-$('#lastName').hide();
+
+
+
+$('#fullName').hide();
 $('#submitButton').hide();
 
 document.addEventListener('input',function() {
@@ -7,13 +9,19 @@ document.querySelector("#inputEmail").onchange=check;},false);
 
 function check(event) {
  if ($("#inputEmail").val()) {
-      $('#firstName').fadeIn(200);
-      $('#lastName').fadeIn(200);
-      $('#submitButton').fadeIn(200);
+   let regex = new RegExp("([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\"\(\[\]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])");
 
-    } else {
-      $('#firstName').hide();
-      $('#lastName').hide();
-      $('#submitButton').hide();
+let email = document.getElementById('inputEmail').value;
+
+if(regex.test(email)) {
+  $('#validation').text('')
+  $('#fullName').fadeIn(200);
+  $('#submitButton').fadeIn(200);
+} else {
+  $('#validation').text('Email is invalid')
+  $('#fullName').hide();
+  $('#submitButton').hide();
+}
+
     }
    }
