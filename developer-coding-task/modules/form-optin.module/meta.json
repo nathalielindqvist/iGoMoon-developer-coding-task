@@ -1,5 +1,6 @@
 {
   "label": "Text Block",
+  "icon": "../../assets/img/SVG/rocket.svg",
   "inline_help_text": "This is a content block with title, content and Cta or button with an option to choose where you want the content to be aligned",
   "module_id": "",
   "is_available_for_new_content": true,
