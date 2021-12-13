@@ -8,6 +8,16 @@
         "allow_new_line": false,
         "show_emoji_picker": false,
         "type": "text",
-        "default" : "Ptulae recubans sub tegmine fagi dolor."
+        "default": "Ptulae recubans sub tegmine fagi dolor.",
+        "help_text": "Choose a describing and strong heading."
+    },
+    {
+        "name": "email",
+        "label": "Email address",
+        "required": false,
+        "locked": false,
+        "type": "email",
+        "default": null,
+        "help_text": "This field will be required for users."
     }
 ]
