@@ -29,6 +29,13 @@
             <div class="mt-3">
                 <button type="submit" id="submitButton" class="btn btn-lg btn-info">Submit</button>
             </div>
+            <div id="privacy">
+                {% macro privacy_policy(text) %}
+                {{ text }}
+                {% endmacro %}
+                {{ privacy_policy('We value your privacy. Therefore we want to make it clear that when you press Submit
+                you consent to us collecting your personal information and storing it for later use.') }}
+            </div>
             </form>
 
         </div>

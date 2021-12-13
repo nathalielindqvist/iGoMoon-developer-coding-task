@@ -1,5 +1,6 @@
 $('#fullName').hide();
 $('#submitButton').hide();
+$('#privacy').hide();
 
 document.addEventListener('input',function() {
 document.querySelector("#inputEmail").onchange=check;},false);
@@ -14,10 +15,12 @@ if(regex.test(email)) {
   $('#validation').hide()
   $('#fullName').fadeIn(200);
   $('#submitButton').fadeIn(200);
+  $('#privacy').fadeIn(200);
 } else {
   $('#validation').text('Email is invalid')
   $('#fullName').hide();
   $('#submitButton').hide();
+  $('#privacy').hide();
 }
 
     }
