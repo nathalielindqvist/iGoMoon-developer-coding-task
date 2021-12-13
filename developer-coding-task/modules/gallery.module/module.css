@@ -1,0 +1,10 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+}
+
+@media screen and (max-width: 900px) {
+.grid-container {
+  grid-template-columns: repeat(2, 50%);
+}
+}

@@ -1,0 +1,63 @@
+[
+  {
+    "id": "pictures",
+    "name": "pictures",
+    "label": "Team pictures",
+    "required": false,
+    "locked": false,
+    "help_text": "Choose which team members to display.",
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "sorting_label_field": "pictures.picture",
+      "default": 6
+    },
+    "children": [
+      {
+        "id": "pictures.image",
+        "name": "image",
+        "label": "Picture",
+        "required": false,
+        "locked": false,
+        "help_text": "Choose which image to represent your team member.",
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "image",
+        "responsive": "true",
+        "default": {
+          "size_type": "auto",
+          "src": "https://f.hubspotusercontent-eu1.net/hubfs/25300201/group-member.png",
+          "alt": "Default image",
+          "loading": "disabled"
+        }
+      },
+      {
+        "id": "pictures.text",
+        "name": "text",
+        "label": "Name",
+        "help_text": "Describe the picture",
+        "required": false,
+        "locked": false,
+        "help_text": "Display the team members name.",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "Name of team member"
+      },
+      {
+        "id": "pictures.role",
+        "name": "role",
+        "label": "Role",
+        "help_text": "Describe the team members role",
+        "required": false,
+        "locked": false,
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "Team members role"
+      }
+    ],
+    "type": "group"
+  }
+]
