@@ -7,18 +7,8 @@
                 <h2 class="heading mb-4">{{ module.heading }}</h2>
                 {% endif %}
             </div>
-            <!--[if lte IE 8]>
-            <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/v2-legacy.js"></script>
-            <![endif]-->
-            <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/v2.js"></script>
-            <script>
-                hbspt.forms.create({
-                    region: "eu1",
-                    portalId: "25300201",
-                    formId: "4a625d35-50e0-41f1-84a4-e4de64f12f17"
-                });
-            </script>
-
+            {% form "form" %}
+            {% form "optin_form" form_to_use='4a625d35-50e0-41f1-84a4-e4de64f12f17', title='Opt-in' %}
         </div>
     </div>
 </section>
