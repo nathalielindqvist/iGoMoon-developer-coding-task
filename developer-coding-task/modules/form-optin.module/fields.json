@@ -8,7 +8,7 @@
         "allow_new_line": false,
         "show_emoji_picker": false,
         "type": "text",
-        "default": "Ptulae recubans sub tegmine fagi dolor.",
+        "default": "We would love to have you!",
         "help_text": "Choose a describing and strong heading."
     },
     {

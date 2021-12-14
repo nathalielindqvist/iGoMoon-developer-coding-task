@@ -1,10 +1,12 @@
-<h3>Meet the team</h3>
+<h3 class="team-heading heading">Meet the team</h3>
 <div class="grid-container">
   {% for picture in module.pictures %}
-  <div class="grid-item">
-    <img src="{{ picture.image.src }}" alt="{{ picture.image.alt }}" width="250" />
-    <div>{{ picture.text }}</div>
-    <div>{{ picture.role }}</div>
+  <div class="team-member">
+    <img class="team-member-image" src="{{ picture.image.src }}" alt="{{ picture.image.alt }}" />
+    <div class="team-member-text">
+      <div>{{ picture.text }}</div>
+      <div>{{ picture.role }}</div>
+    </div>
   </div>
   {% endfor %}
 </div>

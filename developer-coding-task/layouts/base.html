@@ -17,12 +17,12 @@
   {{ require_css(get_asset_url('../assets/css/layout.css')) }}
 </head>
 
-{% block header %}
-{% include "../partials/header.html" %}
-{% endblock header %}
-
 <body class="{{ body_class|join(' ')|trim }} nathalie-lindqvist">
   <div class="body-wrapper {{ builtin_body_classes }}">
+    {% block header %}
+    {% include "../partials/header.html" %}
+    {% endblock header %}
+
     {% block body %}
     {% endblock body %}
 
