@@ -1,101 +1,51 @@
-<!--
-  label: iGoMoon Coding Task
-  templateType: page
-  isAvailableForNewContent: true
-  enableDomainStylesheets: false
--->
+{% extends "./layouts/base.html" %}
+{% block body %}
 
-<!doctype html>
-<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+<div class="site-container">
+    <main id="main-content">
+        <div class="drag-drop">
+            {% dnd_area "dnd_area", label="Dnd Area" %}
+            {% dnd_section padding={
+            top: 10,
+            bottom: 10,
+            right: 10,
+            left: 10
+            }, vertical_alignment= 'MIDDLE' %}
+            {% dnd_column offset=0, width=6, %}
+            {% dnd_row %}
+            {% dnd_module "image" path="@hubspot/image", label="Feature Image" %}
+            {% end_dnd_module %}
+            {% end_dnd_row %}
+            {% end_dnd_column %}
 
-<head>
-    <meta charset="utf-8">
-    <title>{{ content.html_title }}</title>
-    <meta name="description" content="{{ content.meta_description }}">
-    <meta http-equiv="x-ua-compatible" content="IE=edge">
-    {# Favicon #}
-    {% if site_settings.favicon_src %}
-    <link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
-    {# Includes #}
-    {{ standard_header_includes }}
-    {# Styles #}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ get_asset_url('./assets/css/main.css') }}">
-    {{ require_css(get_asset_url('./assets/css/layout.css')) }}
-</head>
+            {% dnd_column offset=6, width=6, %}
+            {% dnd_row %}
+            {% dnd_module path="@hubspot/text" value="Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed
+            do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Sed felis eget velit aliquet sagittis id consectetur purus. Donec ac odio tempor orci dapibus.
+            Lobortis
+            feugiat
+            vivamus at augue eget arcu.", label="Feature Text" %}
+            {% end_dnd_module %}
+            {% end_dnd_row %}
+            {% end_dnd_column %}
 
-{% set body_class = [builtin_body_classes] %}
-
-<body class="{{ body_class|join(' ')|trim }} nathalie-lindqvist">
-    <div>
-        {% include "./partials/header.html" %}
-    </div>
-
-    <div class="site-container">
-        <main id="main-content">
-            <div class="drag-drop">
-                {% dnd_area "dnd_area", label="Dnd Area" %}
-                {% dnd_section padding={
-                top: 10,
-                bottom: 10,
-                right: 10,
-                left: 10
-                }, vertical_alignment= 'MIDDLE' %}
-                {% dnd_column offset=0, width=6, %}
-                {% dnd_row %}
-                {% dnd_module "image" path="@hubspot/image", label="Feature Image" %}
-                {% end_dnd_module %}
-                {% end_dnd_row %}
-                {% end_dnd_column %}
-
-                {% dnd_column offset=6, width=6, %}
-                {% dnd_row %}
-                {% dnd_module path="@hubspot/text" value="Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed
-                do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Sed felis eget velit aliquet sagittis id consectetur purus. Donec ac odio tempor orci dapibus.
-                Lobortis
-                feugiat
-                vivamus at augue eget arcu.", label="Feature Text" %}
-                {% end_dnd_module %}
-                {% end_dnd_row %}
-                {% end_dnd_column %}
-
-                {% end_dnd_section %}
-                {% end_dnd_area %}
-            </div>
-            <div class="form-optin">
-                {% module "module_form_optin_20201119",
-                path="./modules/form-optin",
-                label="Form Optin"
-                %}
-            </div>
-            <div class="gallery">
-                {% module "gallery",
-                path="./modules/gallery",
-                label="Gallery"
-                %}
-            </div>
-        </main>
-    </div>
-
-    {# Includes #}
-    {{ standard_footer_includes }}
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    {# Scripts #}
-    <script src="{{ get_asset_url('./assets/js/main.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-</body>
-
-</html>
+            {% end_dnd_section %}
+            {% end_dnd_area %}
+        </div>
+        <div class="form-optin">
+            {% module "module_form_optin_20201119",
+            path="./modules/form-optin",
+            label="Form Optin"
+            %}
+        </div>
+        <div class="gallery">
+            {% module "gallery",
+            path="./modules/gallery",
+            label="Gallery"
+            %}
+        </div>
+    </main>
+</div>
+{% endblock body %}
