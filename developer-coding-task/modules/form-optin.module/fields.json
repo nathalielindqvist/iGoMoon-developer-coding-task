@@ -12,6 +12,20 @@
         "help_text": "Choose a describing and strong heading."
     },
     {
+        "name": "form",
+        "label": "Form",
+        "required": false,
+        "locked": false,
+        "type": "form",
+        "default": {
+            "form_id": "4a625d35-50e0-41f1-84a4-e4de64f12f17",
+            "response_type": "inline",
+            "message": "Thank you for signing up to our newsletter.",
+            "gotowebinar_webinar_key": null,
+            "form_type": "HUBSPOT"
+        }
+    },
+    {
         "name": "email",
         "label": "Email address",
         "required": false,
